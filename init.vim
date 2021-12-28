@@ -2,6 +2,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set tabstop=2
 set shiftwidth=2
+set smarttab
+set softtabstop=4
 set expandtab
 set number
 set relativenumber
