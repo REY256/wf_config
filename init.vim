@@ -14,7 +14,6 @@ set noswapfile
 hi LineNr ctermfg=grey      "Change color of line numbers
 hi Pmenu ctermfg=white
 hi Pmenu ctermbg=233
-hi StatusLine ctermbg=236 cterm=NONE
 
 
 "PLUGINS
