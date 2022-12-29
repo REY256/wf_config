@@ -13,8 +13,8 @@ vim.o.relativenumber = true
 vim.o.cursorcolumn = true
 
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
-lvim.colorscheme = "onedarker"
+lvim.format_on_save.enabled = true
+lvim.colorscheme = "kanagawa"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -166,12 +166,19 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+lvim.plugins = {
+  {
+    "rebelot/kanagawa.nvim"
+  },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  {
+    "edluffy/hologram.nvim",
+    auto_display = true,
+  },
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
