@@ -168,6 +168,29 @@ lvim.builtin.treesitter.highlight.enable = true
 -- Additional Plugins
 lvim.plugins = {
   {
+    "simrat39/rust-tools.nvim",
+    config = function()
+      local opts = {
+        tools = {
+          reload_workspace_from_cargo_toml = true,
+          inlay_hints = {
+            auto = true,
+          }
+        },
+        server = {
+          on_attach = require("lvim.lsp").common_on_attach,
+          on_init = require("lvim.lsp").common_on_init,
+          settings = {
+            ["rust-analyzer"] = {
+              inlayHints = { locationLinks = false },
+            },
+          },
+        },
+      }
+      require("rust-tools").setup(opts)
+    end,
+  },
+  {
     "rebelot/kanagawa.nvim"
   },
   {
