@@ -191,6 +191,12 @@ lvim.plugins = {
     end,
   },
   {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup()
+    end
+  },
+  {
     "rebelot/kanagawa.nvim"
   },
   {
