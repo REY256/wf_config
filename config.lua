@@ -1,6 +1,5 @@
 --[[
 lvim is the global options object
-
 Linters should be
 filled in as strings with either
 a global executable or a path to
@@ -9,12 +8,13 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-vim.o.relativenumber = true
 vim.o.cursorcolumn = true
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
 
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "kanagawa"
+-- lvim.colorscheme = "kanagawa"
+lvim.colorscheme = "gruvbox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -168,6 +168,18 @@ lvim.builtin.treesitter.highlight.enable = true
 -- Additional Plugins
 lvim.plugins = {
   {
+    "ellisonleao/gruvbox.nvim",
+    config = function()
+      require("gruvbox").setup({
+        contrast = "hard",
+      })
+      vim.cmd("colorscheme gruvbox")
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim"
+  },
+  {
     "simrat39/rust-tools.nvim",
     config = function()
       local opts = {
@@ -195,9 +207,6 @@ lvim.plugins = {
     config = function()
       require("colorizer").setup()
     end
-  },
-  {
-    "rebelot/kanagawa.nvim"
   },
   {
     "folke/trouble.nvim",
