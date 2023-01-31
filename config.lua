@@ -195,6 +195,9 @@ lvim.plugins = {
           settings = {
             ["rust-analyzer"] = {
               inlayHints = { locationLinks = false },
+              check = {
+                command = "clippy"
+              }
             },
           },
         },
