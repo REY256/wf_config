@@ -1,0 +1,25 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+scrolloff = 13
+cursorline = true
+cursorcolumn = true
+auto-save = true
+idle-timeout = 0
+completion-trigger-len = 1
+bufferline = "always"
+true-color = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "┆"
+skip-levels = 1
