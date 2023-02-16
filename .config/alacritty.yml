@@ -272,9 +272,6 @@ schemes:
       focused_match:
         foreground: '#44475a'
         background: '#ffb86c'
-      bar:
-        background: '#282a36'
-        foreground: '#f8f8f2'
     line_indicator:
       foreground: None
       background: None
@@ -550,7 +547,7 @@ schemes:
       blue:    '#81a2be'
       magenta: '#b294bb'
       cyan:    '#70c0ba'
-      white:   '#373b41'
+      white:   '#ffffff'
 
     # Bright colors
     bright:
