@@ -1,7 +1,7 @@
 theme = "gruvbox_dark_hard"
 
 [editor]
-scrolloff = 13
+scrolloff = 10
 cursorline = true
 cursorcolumn = true
 auto-save = true
@@ -19,7 +19,18 @@ select = "block"
 [editor.file-picker]
 hidden = false
 
+[editor.soft-wrap]
+enable = true
+
 [editor.indent-guides]
 render = true
 character = "┆"
 skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "version-control"]
+center = ["spinner", "file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
