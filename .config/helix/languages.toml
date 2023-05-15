@@ -1,6 +1,6 @@
 [[language]]
 name = "rust"
-config = { check = { command = "clippy" }}
+config = { check = { command = "clippy", extraArgs = ["--", "-W", "clippy::pedantic"] }}
 
 [[language]]
 name = "solidity"
@@ -10,9 +10,4 @@ file-types = ["sol"]
 roots = []
 comment-token = "//"
 indent = { tab-width = 4, unit = "    " }
-language-server = { command = "solc", args = [""] }
-
-[[grammar]]
-name = "solidity"
-source = { git = "https://github.com/JoranHonig/tree-sitter-solidity", rev = "9004b86531cb424bd379424cf7266a4585f2af7d" }
-
+language-server = { command = "solidity-ls", args = ["--stdio"] }
