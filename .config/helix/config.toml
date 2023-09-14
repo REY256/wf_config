@@ -3,7 +3,6 @@ theme = "gruvbox_dark_hard"
 [editor]
 scrolloff = 10
 cursorline = true
-cursorcolumn = true
 auto-save = true
 idle-timeout = 0
 completion-trigger-len = 1
