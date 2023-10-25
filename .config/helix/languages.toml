@@ -1,13 +1,3 @@
 [[language]]
 name = "rust"
-config = { check = { command = "clippy", extraArgs = ["--", "-W", "clippy::pedantic"] }}
-
-[[language]]
-name = "solidity"
-scope = "source.sol"
-injection-regex = "(sol|solidity)"
-file-types = ["sol"]
-roots = []
-comment-token = "//"
-indent = { tab-width = 4, unit = "    " }
-language-server = { command = "solidity-ls", args = ["--stdio"] }
+formatter = { command = "clippy", args = ["--", "-W", "clippy::pedantic"] }
