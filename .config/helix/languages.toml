@@ -1,3 +1,4 @@
-[[language]]
-name = "rust"
-formatter = { command = "clippy", args = ["--", "-W", "clippy::pedantic"] }
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+check.extraArgs = ["--", "-W", "clippy::pedantic", "-A", "clippy::missing-errors-doc"]
+checkOnSave = true
